@@ -1,0 +1,238 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*aca va el Header y sus hijos!*/
+.header {
+  width: 100%;
+  height: 20rem;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__logo {
+  margin-left: 1rem;
+  width: 30.03rem;
+  height: 18.09rem;
+}
+
+.header__menu {
+  margin-right: 3rem;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  padding: 0rem;
+  position: absolute;
+  width: 10rem;
+  text-align: right;
+  margin: 0rem 0rem 0rem -1.4rem;
+}
+
+.header__menu:hover ul, .header__menu ul:hover {
+  display: block;
+}
+
+.header__menu li {
+  margin: 1rem 0rem;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  margin-right: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header__menu--profile img {
+  margin-right: 0.8rem;
+  width: 4rem;
+}
+
+.header__menu--profile p {
+  margin: 0rem;
+  color: white;
+}
+
+/*Esto es el Nav y el boton menu*/
+.navigator {
+  width: 90%;
+  height: 100%;
+  left: -100%;
+  position: fixed;
+  margin: 0;
+  background: #024959;
+  font-size: 1.8rem;
+}
+
+.navigator ul {
+  overflow: hidden;
+  list-style: none;
+}
+
+.navigator ul li {
+  float: left;
+  display: block;
+  float: none;
+  border-bottom: 0.1rem solid rgba(4, 255, 255, 0.3);
+}
+
+.navigator ul li a {
+  color: #fff;
+  padding: 2rem;
+  display: block;
+  text-decoration: none;
+}
+
+.navigator ul li a span {
+  margin-right: 1rem;
+}
+
+.navigator ul li a:hover {
+  background: #037E8C;
+}
+
+.menu_bar {
+  display: none;
+  /*con esto desaparecemos el menu*/
+  display: block;
+  width: 100%;
+  background: #ccc;
+}
+
+.menu_bar .bt-menu {
+  display: block;
+  padding: 2rem;
+  background: #024959;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.menu_bar .bt-menu span {
+  float: right;
+}
+
+/*aca va la section con sus hijos*/
+.section {
+  height: auto;
+  min-height: 10vh;
+  background-color: #3f3737;
+}
+
+.section__form {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.section__form .section__form--label {
+  padding: 0.5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section__form .section__form--label span {
+  padding: 1rem 0rem;
+}
+
+.section__form .btn {
+  margin: 2rem 0rem;
+  padding: 2rem;
+  width: 100%;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+
+.section__form .btn:hover {
+  color: red;
+}
+
+.aside {
+  display: none;
+}
+
+/*aca va en mapa*/
+.mapa {
+  width: 100%;
+  height: 100%;
+}
+
+.mapa .mapa__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*aca va el Footer con sus hijos*/
+.footer {
+  width: 100%;
+  height: 10rem;
+  font-size: 1.5rem;
+  background-color: #09550f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer a {
+  padding: 2rem;
+  text-decoration: none;
+  /*desaparece la linea azul del link*/
+  cursor: pointer;
+  /*cambia la flecha del cursor en una mano*/
+  color: black;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=Contactos.css.map */
