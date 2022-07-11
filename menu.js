@@ -21,5 +21,3 @@ function main(){
 	});
 
 };
-
-//http://www.falconmasters.com/web-design/menu-de-navegacion-responsive/
