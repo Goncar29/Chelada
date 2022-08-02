@@ -86,7 +86,7 @@ html {
 
 /*Esto es el Nav y el boton menu*/
 .navigator {
-  width: 90%;
+  width: 100%;
   height: 100%;
   left: -100%;
   position: fixed;
@@ -155,9 +155,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -174,11 +174,11 @@ html {
   text-decoration: underline;
 }
 
-.box {
+.section__container--box .box {
   margin: 2rem 1rem;
 }
 
-.box img {
+.section__container--box .box img {
   width: 100%;
   border-radius: 2rem;
   margin-bottom: 1rem;

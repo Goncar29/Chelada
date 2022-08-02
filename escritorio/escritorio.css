@@ -143,8 +143,9 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   /*si se achica pantalla el contenedor se desplaza hacia abajo*/
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .section__container--box a {
