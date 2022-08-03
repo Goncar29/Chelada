@@ -19,49 +19,49 @@ beerList.push({
 	name: 'MaracuIPA',
 	description: 'Lorem',
 	price: '200',
-	image: './img/beer.jpg',
+	image: './img/maracuipa.jpg',
 });
 beerList.push({
 	name: 'Summer Ale de Frutilla',
 	description: 'Lorem',
 	price: '200',
-	image: './img/beer.jpg',
+	image: './img/frutilla.jpg',
 });
 beerList.push({
 	name: 'Smoke',
 	description: 'Lorem',
 	price: '180',
-	image: './img/beer.jpg',
+	image: './img/smoke.jpg',
 });
 beerList.push({
 	name: 'Irish Red',
 	description: 'Lorem',
 	price: '150',
-	image: './img/beer.jpg',
+	image: './img/irish red.jpg',
 });
 beerList.push({
 	name: 'Porter',
 	description: 'Lorem',
 	price: '180',
-	image: './img/beer.jpg',
+	image: './img/porter.jpg',
 });
 beerList.push({
 	name: 'Barley Wine',
 	description: 'Lorem',
 	price: '200',
-	image: './img/beer.jpg',
+	image: './img/barley wine.jpg',
 });
 beerList.push({
 	name: 'Weisse',
 	description: 'Lorem',
 	price: '150',
-	image: './img/beer.jpg',
+	image: './img/wisse.jpg',
 });
 beerList.push({
 	name: 'Dry Stout',
 	description: 'Lorem',
 	price: '180',
-	image: './img/beer.jpg',
+	image: './img/stout.jpg',
 });
 
 function renderBeer(arr) {
@@ -88,6 +88,7 @@ function renderBeer(arr) {
 		const link = document.createElement('a');
 		link.setAttribute('href', '#');
 		link.innerText = 'Saber mas';
+
 
 		picture.appendChild(source);
 		picture.appendChild(beerImg);
@@ -129,50 +130,50 @@ renderBeer(beerList);
         </div>
     </div> */
 
-	function renderDetailBeer(arr) {
-		for (detail of arr) {
-			const productDetailClosed = document.createElement('div');
-			productDetailClosed.classList.add('productDetailClosed');
+function renderDetailBeer(arr) {
+	for (detail of arr) {
+		const productDetailClosed = document.createElement('div');
+		productDetailClosed.classList.add('productDetailClosed');
 
-			const closedImg = document.createElement('img');
-			closedImg.setAttribute('src', './img/icon_close.png');
-			closedImg.setAttribute('alt', 'close');
+		const closedImg = document.createElement('img');
+		closedImg.setAttribute('src', './img/icon_close.png');
+		closedImg.setAttribute('alt', 'close');
 
-			const detailImg = document.createElement('img');
-			detailImg.setAttribute('src', detail.image);
+		const detailImg = document.createElement('img');
+		detailImg.setAttribute('src', detail.image);
 
-			const productInfo = document.createElement('div');
-			productInfo.classList.add('product-info');
+		const productInfo = document.createElement('div');
+		productInfo.classList.add('product-info');
 
-			const productPrice = document.createElement('p');
-			productPrice.innerText = '$' + detail.price;
-			const productName = document.createElement('p');
-			productName.innerText = detail.name;
-			const productDescription = document.createElement('p');
-			productDescription.innerText = detail.description;
+		const productPrice = document.createElement('p');
+		productPrice.innerText = '$' + detail.price;
+		const productName = document.createElement('p');
+		productName.innerText = detail.name;
+		const productDescription = document.createElement('p');
+		productDescription.innerText = detail.description;
 
-			const detailButton = document.createElement('button');
-			detailButton.classList.add('primary-button');
+		const detailButton = document.createElement('button');
+		detailButton.classList.add('primary-button');
 
-			const cartImg = document.createElement('img');
-			cartImg.setAttribute('src', './img/bt_add_to_cart.svg');
-			cartImg.setAttribute('alt', 'add to cart');
+		const cartImg = document.createElement('img');
+		cartImg.setAttribute('src', './img/bt_add_to_cart.svg');
+		cartImg.setAttribute('alt', 'add to cart');
 
-			productInfo.appendChild(productPrice);
-			productInfo.appendChild(productName);
-			productInfo.appendChild(productDescription);
-			productInfo.appendChild(detailButton);
-			productInfo.appendChild(cartImg);
+		productInfo.appendChild(productPrice);
+		productInfo.appendChild(productName);
+		productInfo.appendChild(productDescription);
+		productInfo.appendChild(detailButton);
+		productInfo.appendChild(cartImg);
 
-			productDetailClosed.appendChild(closedImg);
+		productDetailClosed.appendChild(closedImg);
 
-			productDetail.appendChild(productInfo);
-			productDetail.appendChild(detailImg);
-			productDetail.appendChild(productDetailClosed);
-		}
+		productDetail.appendChild(productInfo);
+		productDetail.appendChild(detailImg);
+		productDetail.appendChild(productDetailClosed);
 	}
+}
 
-	renderDetailBeer(beerList);
+renderDetailBeer(beerList);
 	// <aside id="productDetail" class="inactive">
     //         <div class="product-detail-close">
     //             <img src="./img/icon_close.png" alt="close">

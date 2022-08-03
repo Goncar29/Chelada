@@ -164,6 +164,8 @@ html {
 }
 
 .box img {
+  width: 25rem;
+  height: 30rem;
   border-radius: 2rem;
   margin-bottom: 1rem;
 }
