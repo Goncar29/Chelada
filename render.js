@@ -4,15 +4,15 @@ const productDetailCloseIcon = document.querySelector('.product-detail-close');
 const beerDetail = document.querySelector('#beerDetail');
 const productDetail = document.querySelector('#productDetail');
 
-// productDetailCloseIcon.addEventListener('click', closeProductDetailAside);
+productDetailCloseIcon.addEventListener('click', closeProductDetailAside);
 
-// function openProductDetailAside() {
-//     productDetailContainer.classList.remove('inactive');
-// }
+function openProductDetailAside() {
+    productDetailContainer.classList.remove('inactive');
+}
 
-// function closeProductDetailAside() {
-//     productDetailContainer.classList.add('inactive');
-// }
+function closeProductDetailAside() {
+    productDetailContainer.classList.add('inactive');
+}
 
 const beerList = [];
 beerList.push({
@@ -77,7 +77,7 @@ function renderBeer(arr) {
 
 		const beerImg = document.createElement('img');
 		beerImg.setAttribute('src', beer.image);
-        // beerImg.addEventListener('click', openProductDetailAside);
+        beerImg.addEventListener('click', openProductDetailAside);
 
 		const beerName = document.createElement('h2');
 		beerName.innerText = beer.name;
@@ -103,8 +103,8 @@ function renderBeer(arr) {
 }
 
 renderBeer(beerList);
-
-/* <div id="beerDetail" class="section__container--box">
+/* 
+<div id="beerDetail" class="section__container--box">
         <div class="box">
             <picture>
                 <source media="(min-width:1000px)" srcset="./img/beer.jpg">
@@ -130,50 +130,54 @@ renderBeer(beerList);
         </div>
     </div> */
 
-function renderDetailBeer(arr) {
-	for (detail of arr) {
-		const productDetailClosed = document.createElement('div');
-		productDetailClosed.classList.add('productDetailClosed');
 
-		const closedImg = document.createElement('img');
-		closedImg.setAttribute('src', './img/icon_close.png');
-		closedImg.setAttribute('alt', 'close');
+	// Este render para el aside del html
+// function renderDetailBeer(arr) {
+// 	for (detail of arr) {
+// 		const productDetailClosed = document.createElement('div');
+// 		productDetailClosed.classList.add('productDetailClosed');
 
-		const detailImg = document.createElement('img');
-		detailImg.setAttribute('src', detail.image);
+// 		const closedImg = document.createElement('img');
+// 		closedImg.setAttribute('src', './img/icon_close.png');
+// 		closedImg.setAttribute('alt', 'close');
 
-		const productInfo = document.createElement('div');
-		productInfo.classList.add('product-info');
+// 		const detailImg = document.createElement('img');
+// 		detailImg.setAttribute('src', detail.image);
 
-		const productPrice = document.createElement('p');
-		productPrice.innerText = '$' + detail.price;
-		const productName = document.createElement('p');
-		productName.innerText = detail.name;
-		const productDescription = document.createElement('p');
-		productDescription.innerText = detail.description;
+// 		const productInfo = document.createElement('div');
+// 		productInfo.classList.add('product-info');
 
-		const detailButton = document.createElement('button');
-		detailButton.classList.add('primary-button');
+// 		const productPrice = document.createElement('p');
+// 		productPrice.innerText = '$' + detail.price;
+// 		const productName = document.createElement('p');
+// 		productName.innerText = detail.name;
+// 		const productDescription = document.createElement('p');
+// 		productDescription.innerText = detail.description;
 
-		const cartImg = document.createElement('img');
-		cartImg.setAttribute('src', './img/bt_add_to_cart.svg');
-		cartImg.setAttribute('alt', 'add to cart');
+// 		const detailButton = document.createElement('button');
+// 		detailButton.classList.add('primary-button');
 
-		productInfo.appendChild(productPrice);
-		productInfo.appendChild(productName);
-		productInfo.appendChild(productDescription);
-		productInfo.appendChild(detailButton);
-		productInfo.appendChild(cartImg);
+// 		const cartImg = document.createElement('img');
+// 		cartImg.setAttribute('src', './img/bt_add_to_cart.svg');
+// 		cartImg.setAttribute('alt', 'add to cart');
 
-		productDetailClosed.appendChild(closedImg);
+// 		productInfo.appendChild(productPrice);
+// 		productInfo.appendChild(productName);
+// 		productInfo.appendChild(productDescription);
+// 		productInfo.appendChild(detailButton);
+// 		productInfo.appendChild(cartImg);
 
-		productDetail.appendChild(productInfo);
-		productDetail.appendChild(detailImg);
-		productDetail.appendChild(productDetailClosed);
-	}
-}
+// 		productDetailClosed.appendChild(closedImg);
 
-renderDetailBeer(beerList);
+// 		productDetail.appendChild(productInfo);
+// 		productDetail.appendChild(detailImg);
+// 		productDetail.appendChild(productDetailClosed);
+// 	}
+// }
+
+// renderDetailBeer(beerList);
+
+
 	// <aside id="productDetail" class="inactive">
     //         <div class="product-detail-close">
     //             <img src="./img/icon_close.png" alt="close">
